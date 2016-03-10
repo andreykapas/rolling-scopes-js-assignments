@@ -105,7 +105,8 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-    throw new Error('Not implemented');
+    //throw new Error('Not implemented');
+    return value.trim();
 }
 
 /**
