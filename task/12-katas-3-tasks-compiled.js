@@ -27,10 +27,10 @@
  *   'FUNCTION'  => false
  *   'NULL'      => false 
  */
+
 function findStringInSnakingPuzzle(puzzle, searchStr) {
     throw new Error('Not implemented');
 }
-
 
 /**
  * Returns all permutations of the specified string.
@@ -47,7 +47,6 @@ function findStringInSnakingPuzzle(puzzle, searchStr) {
 function* getPermutations(chars) {
     throw new Error('Not implemented');
 }
-
 
 /**
  * Returns the most profit from stock quotes.
@@ -68,7 +67,6 @@ function getMostProfitFromStockQuotes(quotes) {
     throw new Error('Not implemented');
 }
 
-
 /**
  * Class representing the url shorting helper.
  * Feel free to implement any algorithm, but do not store link in the key\value stores.
@@ -84,22 +82,19 @@ function getMostProfitFromStockQuotes(quotes) {
  * 
  */
 function UrlShortener() {
-    this.urlAllowedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"+
-                           "abcdefghijklmnopqrstuvwxyz"+
-                           "0123456789-_.~!*'();:@&=+$,/?#[]";
+    this.urlAllowedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz" + "0123456789-_.~!*'();:@&=+$,/?#[]";
 }
 
 UrlShortener.prototype = {
 
-    encode: function(url) {
+    encode: function (url) {
         throw new Error('Not implemented');
     },
-    
-    decode: function(code) {
-        throw new Error('Not implemented');
-    } 
-}
 
+    decode: function (code) {
+        throw new Error('Not implemented');
+    }
+};
 
 module.exports = {
     findStringInSnakingPuzzle: findStringInSnakingPuzzle,
@@ -107,3 +102,5 @@ module.exports = {
     getMostProfitFromStockQuotes: getMostProfitFromStockQuotes,
     UrlShortener: UrlShortener
 };
+
+//# sourceMappingURL=12-katas-3-tasks-compiled.js.map
