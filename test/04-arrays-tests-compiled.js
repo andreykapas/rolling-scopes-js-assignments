@@ -412,6 +412,9 @@ describe('04-arrays-tasks', function () {
         }, {
             arr: [{ country: 'D', city: '1' }, { country: 'E', city: '1' }, { country: 'A', city: '2' }, { country: 'B', city: '1' }, { country: 'B', city: '2' }, { country: 'A', city: '1' }],
             expected: [{ country: 'A', city: '1' }, { country: 'A', city: '2' }, { country: 'B', city: '1' }, { country: 'B', city: '2' }, { country: 'D', city: '1' }, { country: 'E', city: '1' }]
+        }, {
+            arr: [{ country: '5', city: '1' }, { country: '1', city: '1' }, { country: '1', city: '2' }, { country: '1', city: '3' }, { country: '2', city: '2' }, { country: '1', city: '1' }, { country: '1', city: '1' }, { country: '2', city: '1' }, { country: '3', city: '1' }, { country: '3', city: '3' }, { country: '2', city: '5' }, { country: '5', city: '2' }],
+            expected: [{ country: '1', city: '1' }, { country: '1', city: '1' }, { country: '1', city: '1' }, { country: '1', city: '2' }, { country: '1', city: '3' }, { country: '2', city: '1' }, { country: '2', city: '2' }, { country: '2', city: '5' }, { country: '3', city: '1' }, { country: '3', city: '3' }, { country: '5', city: '1' }, { country: '5', city: '2' }]
         }].forEach(data => {
             var actual = tasks.sortCitiesArray(data.arr);
             assert.deepEqual(data.expected, actual);
@@ -508,7 +511,7 @@ describe('04-arrays-tasks', function () {
             expected: ['o', 'n', 'e', 't', 'w', 'o', 't', 'h', 'r', 'e', 'e']
         }].forEach(data => {
             var actual = tasks.selectMany(data.arr, data.childrenSelector);
-            assert.deepEqual(data.expected, actual);
+            assert.deepStrictEqual(data.expected, actual);
         });
     });
 
