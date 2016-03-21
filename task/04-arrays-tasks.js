@@ -245,9 +245,7 @@ function toArrayOfSquares(arr) {
  */
 function getMovingSum(arr) {
    let sum = 0;
-   return arr.map(x => {
-      return sum += x;
-   });
+   return arr.map(x => sum += x);
 }
 
 /**
