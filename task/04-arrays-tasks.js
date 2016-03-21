@@ -89,7 +89,11 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
+   //throw new Error('Not implemented');
+   function isString(value) {
+      return typeof value == 'string';
+   }
+   return arr.filter(isString);
 }
 
 /**
