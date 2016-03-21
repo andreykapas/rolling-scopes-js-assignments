@@ -170,7 +170,8 @@ function insertItem(arr, item, index) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
 function getHead(arr, n) {
-   return arr.splice(0, n, Number.MAX_VALUE);
+   //return arr.splice(0, n, Number.MAX_VALUE);
+   return arr.slice(0, n);
 }
 
 
