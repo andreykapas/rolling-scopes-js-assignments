@@ -39,7 +39,6 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   //throw new Error('Not implemented');
    return Array.from({length: len}, (v, k) => k * 2 + 1);
 }
 
@@ -56,7 +55,7 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
-   throw new Error('Not implemented');
+   return arr.concat(arr);
 }
 
 
