@@ -31,7 +31,7 @@ function findElement(arr, value) {
  * Generates an array of odd numbers of the specified length
  * 
  * @param {number} len
- * @return {array}
+ * @return {Array}
  * 
  * @example
  *    1 => [ 1 ] 
@@ -39,7 +39,8 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   throw new Error('Not implemented');
+   //throw new Error('Not implemented');
+   return Array.from({length: len}, (v, k) => k * 2 + 1);
 }
 
 
