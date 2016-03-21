@@ -89,7 +89,6 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   //throw new Error('Not implemented');
    function isString(value) {
       return typeof value == 'string';
    }
@@ -110,7 +109,10 @@ function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-   throw new Error('Not implemented');
+   function isTruthy(value) {
+      return value;
+   }
+   return arr.filter(isTruthy);
 }
 
 /**
