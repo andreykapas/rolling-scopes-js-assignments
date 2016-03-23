@@ -31,7 +31,8 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-   throw new Error('Not implemented');
+    let hex = '(\\d|[a-f])';
+    return new RegExp(`(^{)${hex}{8}(-)${hex}{4}(-)${hex}{4}(-)${hex}{4}(-)${hex}{12}(}$)`, 'i');
 }
 
 
