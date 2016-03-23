@@ -73,7 +73,8 @@ function getRegexForPitSpot() {
  * @return {RegExp}
  */
 function getRegexForIPv4() {
-   throw new Error('Not implemented');
+    let xx = '(\\d{1,2}|[0-1]\\d{1,2}|2[0-4][0-9]|25[0-5])';
+    return new RegExp(`(^${xx})(\.)(${xx})(\.)(${xx})(\.)(${xx})$`);
 }
 
 
