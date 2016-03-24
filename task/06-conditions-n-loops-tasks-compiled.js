@@ -30,7 +30,15 @@
  */
 
 function getFizzBuzz(num) {
-  throw new Error('Not implemented');
+    if (num % 3 == 0 && num % 5 == 0) {
+        return 'FizzBuzz';
+    } else if (num % 5 == 0) {
+        return 'Buzz';
+    } else if (num % 3 == 0) {
+        return 'Fizz';
+    } else {
+        return num;
+    }
 }
 
 /**
@@ -45,7 +53,7 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -61,7 +69,7 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -79,7 +87,7 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a, b, c) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -115,7 +123,7 @@ function isTriangle(a, b, c) {
  *  
  */
 function doRectanglesOverlap(rect1, rect2) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -145,7 +153,7 @@ function doRectanglesOverlap(rect1, rect2) {
  *   
  */
 function isInsideCircle(circle, point) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -160,7 +168,7 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -185,7 +193,7 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -201,7 +209,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -217,7 +225,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -241,7 +249,7 @@ function reverseInteger(num) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(ccn) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -259,7 +267,7 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -284,7 +292,7 @@ function getDigitalRoot(num) {
  *   '{[(<{[]}>)]}' = true 
  */
 function isBracketsBalanced(str) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -319,7 +327,7 @@ function isBracketsBalanced(str) {
  *
  */
 function timespanToHumanString(startDate, endDate) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -342,7 +350,7 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 function toNaryString(num, n) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -358,7 +366,7 @@ function toNaryString(num, n) {
  *   ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'] => '/'
  */
 function getCommonDirectoryPath(pathes) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -380,7 +388,7 @@ function getCommonDirectoryPath(pathes) {
  *
  */
 function getMatrixProduct(m1, m2) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 /**
@@ -414,28 +422,28 @@ function getMatrixProduct(m1, m2) {
  *
  */
 function evaluateTicTacToePosition(position) {
-  throw new Error('Not implemented');
+    throw new Error('Not implemented');
 }
 
 module.exports = {
-  getFizzBuzz: getFizzBuzz,
-  getFactorial: getFactorial,
-  getSumBetweenNumbers: getSumBetweenNumbers,
-  isTriangle: isTriangle,
-  doRectanglesOverlap: doRectanglesOverlap,
-  isInsideCircle: isInsideCircle,
-  findFirstSingleChar: findFirstSingleChar,
-  getIntervalString: getIntervalString,
-  reverseString: reverseString,
-  reverseInteger: reverseInteger,
-  isCreditCardNumber: isCreditCardNumber,
-  getDigitalRoot: getDigitalRoot,
-  isBracketsBalanced: isBracketsBalanced,
-  timespanToHumanString: timespanToHumanString,
-  toNaryString: toNaryString,
-  getCommonDirectoryPath: getCommonDirectoryPath,
-  getMatrixProduct: getMatrixProduct,
-  evaluateTicTacToePosition: evaluateTicTacToePosition
+    getFizzBuzz: getFizzBuzz,
+    getFactorial: getFactorial,
+    getSumBetweenNumbers: getSumBetweenNumbers,
+    isTriangle: isTriangle,
+    doRectanglesOverlap: doRectanglesOverlap,
+    isInsideCircle: isInsideCircle,
+    findFirstSingleChar: findFirstSingleChar,
+    getIntervalString: getIntervalString,
+    reverseString: reverseString,
+    reverseInteger: reverseInteger,
+    isCreditCardNumber: isCreditCardNumber,
+    getDigitalRoot: getDigitalRoot,
+    isBracketsBalanced: isBracketsBalanced,
+    timespanToHumanString: timespanToHumanString,
+    toNaryString: toNaryString,
+    getCommonDirectoryPath: getCommonDirectoryPath,
+    getMatrixProduct: getMatrixProduct,
+    evaluateTicTacToePosition: evaluateTicTacToePosition
 };
 
 //# sourceMappingURL=06-conditions-n-loops-tasks-compiled.js.map
