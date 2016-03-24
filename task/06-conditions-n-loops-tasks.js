@@ -54,7 +54,6 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    //throw new Error('Not implemented');
     let factorial = 1;
     for (let i = 1; i <= n; i++) {
         factorial *= i;
@@ -76,7 +75,11 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    let sum = 0;
+    for (let  i = n1; i <= n2; i++) {
+        sum += i;
+    }
+    return sum;
 }
 
 
