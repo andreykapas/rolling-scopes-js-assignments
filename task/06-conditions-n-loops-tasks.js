@@ -302,7 +302,8 @@ function isCreditCardNumber(ccn) {
         } else digit = n[counter];
         sum += +digit;
     }
-    return !(sum % 10);}
+    return !(sum % 10);
+}
 
 
 /**
@@ -320,7 +321,16 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-    throw new Error('Not implemented');
+    let n = num.toString();
+    let sum = 0;
+    for (let counter = 0; counter < n.length; counter++) {
+        sum += +n[counter];
+        if (counter == (n.length - 1) && sum > 9) {
+            n = sum;
+            return getDigitalRoot(n);
+        }
+    }
+    return sum;
 }
 
 
