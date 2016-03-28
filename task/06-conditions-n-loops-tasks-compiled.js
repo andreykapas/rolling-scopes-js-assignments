@@ -407,7 +407,63 @@ function isBracketsBalanced(str) {
  *
  */
 function timespanToHumanString(startDate, endDate) {
-    throw new Error('Not implemented');
+    let diff = endDate.getTime() - startDate.getTime();
+
+    const msecPerSec = 1000;
+    const msecPerMin = 60 * msecPerSec;
+    const msecPerHour = 60 * msecPerMin;
+    const msecPerDay = 24 * msecPerHour;
+    const msecPerMonth = 30 * msecPerDay;
+    const msecPerYear = 365 * msecPerDay;
+
+    const sec45 = 45 * msecPerSec;
+    const sec90 = 90 * msecPerSec;
+    const min45 = 45 * msecPerMin;
+    const min90 = 90 * msecPerMin;
+    const hour22 = 22 * msecPerHour;
+    const hour36 = 36 * msecPerHour;
+    const day25 = 25 * msecPerDay;
+    const day45 = 45 * msecPerDay;
+    const day345 = 345 * msecPerDay;
+    const day546 = 546 * msecPerDay;
+
+    let answ = '';
+
+    switch (true) {
+        case diff <= sec45:
+            answ = 'a few seconds ago';
+            break;
+        case diff <= sec90:
+            answ = 'a minute ago';
+            break;
+        case diff <= min45:
+            answ = Math.round((diff - 1) / msecPerMin) + ' minutes ago';
+            break;
+        case diff <= min90:
+            answ = 'an hour ago';
+            break;
+        case diff <= hour22:
+            answ = Math.round((diff - 1) / msecPerHour) + ' hours ago';
+            break;
+        case diff <= hour36:
+            answ = 'a day ago';
+            break;
+        case diff <= day25:
+            answ = Math.round((diff - 1) / msecPerDay) + ' days ago';
+            break;
+        case diff <= day45:
+            answ = 'a month ago';
+            break;
+        case diff <= day345:
+            answ = Math.round((diff - 1) / msecPerMonth) + ' months ago';
+            break;
+        case diff < day546:
+            answ = 'a year ago';
+            break;
+        default:
+            answ = Math.round((diff - 1) / msecPerYear) + ' years ago';
+    }
+    return answ;
 }
 
 /**
